@@ -7,7 +7,8 @@ Companion to the *Using Vue.js with Webrium* guide. This plugin automates the fi
 ## Requirements
 
 - A Webrium project with its default Vite setup in place.
-- `webrium/core` **>= 5.2.0**. On an older core version, `vite_assets()` can silently drop the CSS `<link>` tag for this second Vite entry — see the note in the guide if you can't upgrade yet.
+- `webrium/core` **>= 5.2.0**. On an older core version, `vite_assets()` can silently drop the CSS `<link>` tag for this second Vite entry — see the note in `VUE-ADMIN-PANEL-SETUP.md` (installed at your project root) if you can't upgrade yet.
+- `webrium/console` **>= 2.4.0** to see the setup instructions printed automatically right after install (see below). Not required for the install itself — on an older console version the plugin still installs everything correctly, you just won't get the automatic "Next steps:" printout, and read `VUE-ADMIN-PANEL-SETUP.md` yourself instead.
 - Node.js and npm.
 
 ## Install
@@ -26,50 +27,13 @@ This creates:
 | `app/Views/layouts/Admin.php` | The page shell — a single `#admin-app` mount point |
 | `resources/js/admin.js` | Vite entry point: creates and mounts the Vue app |
 | `resources/js/admin/Admin.vue` | Root component (a placeholder counter — replace with your own UI) |
+| `VUE-ADMIN-PANEL-SETUP.md` | The 3 remaining manual steps — see below |
 
 ## What the plugin can't do for you (3 steps)
 
-Webrium's plugin installer can only copy new files into your project — it can't run shell commands or edit files you already have. So three small steps are still manual:
+Webrium's plugin installer can only copy new files into your project — it can't run shell commands or edit files you already have. So three small steps are still manual: installing the JS dependencies, registering the Vue plugin plus a second build entry in `vite.config.js`, and adding the `/admin` route.
 
-**1. Install the JS dependencies:**
-
-```bash
-npm install vue @vitejs/plugin-vue
-```
-
-**2. Register the Vue plugin and a second build entry in `vite.config.js`:**
-
-```js
-import { defineConfig } from 'vite';
-import webrium from '@webrium/vite-plugin';
-import vue from '@vitejs/plugin-vue'; // add this
-
-export default defineConfig(({ command }) => ({
-  plugins: [
-    webrium(),
-    vue(), // add this
-  ],
-  // ...unchanged...
-  build: {
-    // ...unchanged...
-    rollupOptions: {
-      input: {
-        app: 'resources/js/app.js',
-        admin: 'resources/js/admin.js', // add this
-      },
-    },
-  },
-  // ...unchanged...
-}));
-```
-
-**3. Add the route**, in `app/Routes/Web.php`:
-
-```php
-use App\Controllers\AdminController;
-
-Route::get('/admin', [AdminController::class, 'index']);
-```
+On `webrium/console` >= 2.4.0, `plugin:install` prints these steps automatically right after installing (via the `post_install_message_file` manifest field, pointing at `VUE-ADMIN-PANEL-SETUP.md`). On an older console, or if you scroll past it, open `VUE-ADMIN-PANEL-SETUP.md` at your project root — it has the exact before/after `vite.config.js` diff and is written so an AI coding assistant can carry out the steps directly from it too. Delete the file once you're done.
 
 Then `npm run dev` (or `npm run build` for production) and visit `/admin`.
 
