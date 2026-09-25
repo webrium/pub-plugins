@@ -1,6 +1,6 @@
 # vue-admin-panel
 
-A real, standard admin panel for a [Webrium](https://github.com/webrium/webrium) project — built with Vue.js, Vue Router, Tailwind CSS, and daisyUI. Sidebar navigation, a top bar, and a fully-built sample dashboard (stat cards + activity table), plus Users and Settings as lighter starting points. General-purpose enough to drop into any project and build on.
+A real, standard admin panel for a [Webrium](https://github.com/webrium/webrium) project — built with Vue.js, Vue Router, Tailwind CSS, and daisyUI. Sidebar navigation, a top bar with a light/dark theme toggle, and a fully-built sample dashboard (stat cards + activity table), plus Users and Settings as lighter starting points. General-purpose enough to drop into any project and build on.
 
 Companion to the *Using Vue.js with Webrium* guide, and a step up from the [`vue-starter`](../vue-starter/) plugin — that one is a bare-bones proof that Vue is wired in; this one is an actual usable admin panel shell.
 
