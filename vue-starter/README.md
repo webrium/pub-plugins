@@ -35,14 +35,22 @@ This creates:
 
 Webrium's plugin installer can only copy new files into your project — it can't run shell commands or edit files you already have. So three small steps are still manual: installing the JS dependencies, registering the Vue plugin plus a second build entry in `vite.config.js`, and adding the `/vue-demo` route.
 
-Right after installing (on `webrium/console` >= 2.4.0), you'll see a short pointer:
+Right after installing (on `webrium/console` >= 2.4.0), you'll see:
 
 ```
 Next steps:
-To finish setup, read and follow VUE-STARTER-SETUP.md at your project root ...
+Finish setting up vue-starter:
+
+  1. npm install vue @vitejs/plugin-vue
+  2. Wire vue() + the 'vue-demo' entry into vite.config.js
+  3. Add the /vue-demo route
+
+Full details (exact before/after diffs) are in VUE-STARTER-SETUP.md at your
+project root — also written so an AI coding assistant can carry them out
+directly. Delete it once done.
 ```
 
-Open `VUE-STARTER-SETUP.md` — it has the exact before/after `vite.config.js` diff and is written so an AI coding assistant can carry out the steps directly from it too. Delete the file once you're done.
+(`VUE-STARTER-SETUP.md` renders in bold in a real terminal — the message uses Symfony Console's own `<options=bold>` formatting tag.) Open the file for the exact before/after `vite.config.js` diff.
 
 Then `npm run dev` (or `npm run build` for production) and visit `/vue-demo`.
 
