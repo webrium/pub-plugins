@@ -1,0 +1,48 @@
+{
+    "name": "vue-admin-panel",
+    "version": "1.0.0",
+    "description": "Scaffolds a Vue.js-powered admin panel (controller, layout, Vite entry, root component). After installing, run 'npm install vue @vitejs/plugin-vue', register the vue() plugin plus an 'admin' entry in vite.config.js, and add the /admin route \u2014 see the plugin's README for the exact 3 steps.",
+    "author": "Webrium",
+    "require": {
+        "webrium/core": ">=5.2.0"
+    },
+    "export": [
+        {
+            "file": "app/Controllers/AdminController.php",
+            "dest": "controllers",
+            "subpath": null,
+            "overwrite": false
+        },
+        {
+            "file": "app/Views/layouts/Admin.php",
+            "dest": "views",
+            "subpath": "layouts",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin.js",
+            "dest": "resources",
+            "subpath": "js",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/Admin.vue",
+            "dest": "resources",
+            "subpath": "js/admin",
+            "overwrite": false
+        }
+    ],
+    "sql": [],
+    "hooks": {
+        "before_install": [],
+        "after_install": []
+    },
+    "meta": {
+        "remaining_manual_steps": [
+            "npm install vue @vitejs/plugin-vue",
+            "Register vue() and add an 'admin' entry to rollupOptions.input in vite.config.js",
+            "Add Route::get('/admin', [App\\Controllers\\AdminController::class, 'index']); to app/Routes/Web.php"
+        ],
+        "guide_slug": "using-vuejs-with-webrium"
+    }
+}
