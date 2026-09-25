@@ -1,8 +1,10 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import Icon from './Icon.vue';
+import { useTheme } from '../theme';
 
 const route = useRoute();
+const { theme, toggle } = useTheme();
 </script>
 
 <template>
@@ -15,6 +17,15 @@ const route = useRoute();
     </div>
 
     <div class="flex items-center gap-2">
+      <button
+        type="button"
+        class="btn btn-ghost btn-circle"
+        :aria-label="theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+        @click="toggle"
+      >
+        <Icon :name="theme === 'dark' ? 'sun' : 'moon'" />
+      </button>
+
       <button type="button" class="btn btn-ghost btn-circle" aria-label="Notifications">
         <Icon name="bell" />
       </button>
