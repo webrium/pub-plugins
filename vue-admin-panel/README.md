@@ -11,8 +11,12 @@ Companion to the *Using Vue.js with Webrium* guide, and a step up from the [`vue
 | Dashboard (`/admin`) | 4 stat cards (revenue, users, orders, conversion) + a recent-activity table — sample data, styled like a real product |
 | Users (`/admin/users`) | A sample user list table (name, email, role, status) |
 | Settings (`/admin/settings`) | A sample settings form (name, email, a toggle) |
+| Login (`/admin/login`) | A centered sign-in card — **view only, no authentication wired up** |
+| Register (`/admin/register`) | A centered sign-up card — **view only, no authentication wired up** |
 
-All data is static/sample — wire it up to your own backend once you're happy with the shell. Navigation between the three uses Vue Router (client-side), so it's instant after the first load.
+All data is static/sample — wire it up to your own backend once you're happy with the shell. Navigation between Dashboard/Users/Settings uses Vue Router (client-side), so it's instant after the first load.
+
+Login and Register render full-screen, without the sidebar/top bar (see `meta.layout: 'auth'` in `router.js` and the check in `App.vue`) — they're meant to replace whatever real auth flow you build, not to sit inside the panel chrome.
 
 ## Requirements
 
