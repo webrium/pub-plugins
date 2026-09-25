@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class AdminController
+class VueDemoController
 {
   public function index()
   {
-    return view('layouts/Admin');
+    return view('layouts/VueDemo');
   }
 }
