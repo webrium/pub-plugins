@@ -8,6 +8,7 @@ Each plugin lives in its own top-level directory:
 | --- | --- |
 | [`vue-starter`](vue-starter/) | Minimal Vue.js integration: a second Vite entry, a placeholder component, and a controller + layout to mount it |
 | [`vue-admin-panel`](vue-admin-panel/) | A real admin panel: Vue Router, sidebar + top bar (Tailwind/daisyUI), a sample dashboard, users list, and settings form |
+| [`react-starter`](react-starter/) | Minimal React integration: a second Vite entry, a placeholder component, and a controller + layout to mount it |
 
 ## Installing a plugin
 
