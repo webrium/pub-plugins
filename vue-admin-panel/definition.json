@@ -1,7 +1,7 @@
 {
     "name": "vue-admin-panel",
     "version": "1.0.0",
-    "description": "A real, standard admin panel built with Vue.js, Vue Router, Tailwind CSS, and daisyUI: sidebar navigation, a top bar, and a sample dashboard (stat cards + activity table) plus Users and Settings starting points. General-purpose enough to drop into any Webrium project and build on.",
+    "description": "A real, standard admin panel built with Vue.js, Vue Router, Tailwind CSS, and daisyUI: sidebar navigation, a top bar with a light/dark theme toggle, and a sample dashboard (stat cards + activity table) plus Users and Settings starting points. General-purpose enough to drop into any Webrium project and build on.",
     "author": "Webrium",
     "require": {
         "webrium/core": ">=5.2.0"
@@ -33,6 +33,12 @@
         },
         {
             "file": "resources/js/admin/router.js",
+            "dest": "resources",
+            "subpath": "js/admin",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/theme.js",
             "dest": "resources",
             "subpath": "js/admin",
             "overwrite": false
