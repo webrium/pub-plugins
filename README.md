@@ -6,7 +6,7 @@ Each plugin lives in its own top-level directory:
 
 | Plugin | Description |
 | --- | --- |
-| [`vue-admin-panel`](vue-admin-panel/) | Scaffolds a Vue.js-powered admin panel (controller, layout, Vite entry, root component) |
+| [`vue-starter`](vue-starter/) | Minimal Vue.js integration: a second Vite entry, a placeholder component, and a controller + layout to mount it |
 
 ## Installing a plugin
 

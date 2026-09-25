@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Admin</title>
+  <title>Vue Demo</title>
 
-  <!-- Vue admin bundle (Vite: CSS & JS) -->
-  @raw( vite_assets('resources/js/admin.js') )
+  <!-- Vue demo bundle (Vite: CSS & JS) -->
+  @raw( vite_assets('resources/js/vue-demo.js') )
 </head>
 
 <body>
   <!-- Vue mounts here -->
-  <div id="admin-app"></div>
+  <div id="vue-demo-app"></div>
 </body>
 
 </html>
