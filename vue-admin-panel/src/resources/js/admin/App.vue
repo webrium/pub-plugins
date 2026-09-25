@@ -1,10 +1,17 @@
 <script setup>
+import { useRoute } from 'vue-router';
 import Sidebar from './components/Sidebar.vue';
 import Topbar from './components/Topbar.vue';
+
+const route = useRoute();
 </script>
 
 <template>
-  <div class="drawer lg:drawer-open">
+  <!-- Auth pages (login/register) render full-screen, without the
+       sidebar/top bar — see meta.layout in router.js. -->
+  <router-view v-if="route.meta.layout === 'auth'" />
+
+  <div v-else class="drawer lg:drawer-open">
     <input id="admin-drawer" type="checkbox" class="drawer-toggle" />
 
     <div class="drawer-content flex flex-col min-h-screen bg-base-200">
