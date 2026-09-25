@@ -27,7 +27,7 @@ const navItems = [
           class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-medium transition-colors"
           :class="route.name === item.name
             ? 'bg-primary/10 text-primary'
-            : 'text-base-content/70 hover:bg-base-200 hover:text-base-content'"
+            : 'bg-base-200/50 text-base-content/80 hover:bg-base-200 hover:text-base-content'"
         >
           <Icon :name="item.icon" />
           {{ item.label }}
