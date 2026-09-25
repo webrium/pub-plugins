@@ -1,0 +1,116 @@
+{
+    "name": "vue-admin-panel",
+    "version": "1.0.0",
+    "description": "A real, standard admin panel built with Vue.js, Vue Router, Tailwind CSS, and daisyUI: sidebar navigation, a top bar with a light/dark theme toggle, a sample dashboard (stat cards + activity table), Users and Settings starting points, and view-only Login/Register pages (no auth wired up). General-purpose enough to drop into any Webrium project and build on.",
+    "author": "Webrium",
+    "require": {
+        "webrium/core": ">=5.2.0"
+    },
+    "export": [
+        {
+            "file": "app/Controllers/AdminController.php",
+            "dest": "controllers",
+            "subpath": null,
+            "overwrite": false
+        },
+        {
+            "file": "app/Views/layouts/Admin.php",
+            "dest": "views",
+            "subpath": "layouts",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin.js",
+            "dest": "resources",
+            "subpath": "js",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/App.vue",
+            "dest": "resources",
+            "subpath": "js/admin",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/router.js",
+            "dest": "resources",
+            "subpath": "js/admin",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/theme.js",
+            "dest": "resources",
+            "subpath": "js/admin",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/components/Icon.vue",
+            "dest": "resources",
+            "subpath": "js/admin/components",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/components/Sidebar.vue",
+            "dest": "resources",
+            "subpath": "js/admin/components",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/components/Topbar.vue",
+            "dest": "resources",
+            "subpath": "js/admin/components",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/components/StatCard.vue",
+            "dest": "resources",
+            "subpath": "js/admin/components",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/pages/Dashboard.vue",
+            "dest": "resources",
+            "subpath": "js/admin/pages",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/pages/Users.vue",
+            "dest": "resources",
+            "subpath": "js/admin/pages",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/pages/Settings.vue",
+            "dest": "resources",
+            "subpath": "js/admin/pages",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/pages/Login.vue",
+            "dest": "resources",
+            "subpath": "js/admin/pages",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/admin/pages/Register.vue",
+            "dest": "resources",
+            "subpath": "js/admin/pages",
+            "overwrite": false
+        },
+        {
+            "file": "ADMIN-PANEL-SETUP.md",
+            "dest": "root",
+            "subpath": null,
+            "overwrite": true
+        }
+    ],
+    "sql": [],
+    "hooks": {
+        "before_install": [],
+        "after_install": []
+    },
+    "meta": {
+        "guide_slug": "using-vuejs-with-webrium"
+    },
+    "post_install_message": "<options=bold>Finish setting up vue-admin-panel:</>\n\n  1. npm install vue vue-router @vitejs/plugin-vue\n  2. Wire vue() + the 'admin' entry into vite.config.js\n  3. Add the /admin/{page?} route\n\nFull details (exact before/after diffs, and why the route needs {page?}) are in <options=bold>ADMIN-PANEL-SETUP.md</> at your project root \u2014 also written so an AI coding assistant can carry them out directly. Delete it once done."
+}
