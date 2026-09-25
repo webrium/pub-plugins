@@ -1,0 +1,49 @@
+{
+    "name": "react-starter",
+    "version": "1.0.0",
+    "description": "Minimal React integration for a Webrium project: a second Vite entry, a placeholder component, a controller and layout to mount it, wired together as a working example. Not an admin panel or any other real feature \u2014 just proof that React is set up correctly, ready for you to build on.",
+    "author": "Webrium",
+    "require": {
+        "webrium/core": ">=5.2.0"
+    },
+    "export": [
+        {
+            "file": "app/Controllers/ReactDemoController.php",
+            "dest": "controllers",
+            "subpath": null,
+            "overwrite": false
+        },
+        {
+            "file": "app/Views/layouts/ReactDemo.php",
+            "dest": "views",
+            "subpath": "layouts",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/react-demo.jsx",
+            "dest": "resources",
+            "subpath": "js",
+            "overwrite": false
+        },
+        {
+            "file": "resources/js/react-demo/Demo.jsx",
+            "dest": "resources",
+            "subpath": "js/react-demo",
+            "overwrite": false
+        },
+        {
+            "file": "REACT-STARTER-SETUP.md",
+            "dest": "root",
+            "subpath": null,
+            "overwrite": true
+        }
+    ],
+    "sql": [],
+    "hooks": {
+        "before_install": [],
+        "after_install": []
+    },
+    "meta": [],
+    "post_install_message": "<options=bold>Finish setting up react-starter:</>\n\n  1. npm install react react-dom @vitejs/plugin-react\n  2. Wire react() + the 'react-demo' entry into vite.config.js\n  3. Add the /react-demo route\n\nFull details (exact before/after diffs) are in <options=bold>REACT-STARTER-SETUP.md</> at your project root \u2014 also written so an AI coding assistant can carry them out directly. Delete it once done.",
+    "post_install_message_file": null
+}
