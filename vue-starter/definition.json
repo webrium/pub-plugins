@@ -46,6 +46,5 @@
     "meta": {
         "guide_slug": "using-vuejs-with-webrium"
     },
-    "post_install_message": "To finish setup, read and follow VUE-STARTER-SETUP.md at your project root (3 short steps: npm install, wire vite.config.js, add the route) \u2014 it's also written so an AI coding assistant can carry them out directly.",
-    "post_install_message_file": null
+    "post_install_message": "<options=bold>Finish setting up vue-starter:</>\n\n  1. npm install vue @vitejs/plugin-vue\n  2. Wire vue() + the 'vue-demo' entry into vite.config.js\n  3. Add the /vue-demo route\n\nFull details (exact before/after diffs) are in <options=bold>VUE-STARTER-SETUP.md</> at your project root \u2014 also written so an AI coding assistant can carry them out directly. Delete it once done."
 }
